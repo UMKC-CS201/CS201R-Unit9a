@@ -1,5 +1,25 @@
 #include "Examples.h"
 
+void SlicingExample() {
+    vector<Pet> myPets;
+
+    Pet pet1("Babs", "cat");
+    Pet pet2("Chatty", "parrot");
+    Pet pet3("Soft Kitty", "cat");
+    myPets.push_back(pet1);
+    myPets.push_back(pet2);
+    myPets.push_back(pet3);
+
+    Dog dog1("Tiny", "dog", "Great Dane");
+    Dog dog2("Zeus", "dog", "Toy Poodle");
+    Dog dog3("Fluffy", "dog", "Golden Retriever");
+    myPets.push_back(dog1);
+    myPets.push_back(dog2);
+    myPets.push_back(dog3);
+    for (auto i : myPets)
+        i.print();
+}
+
 void ComplexExample() {
     cout << "\n\nCOMPLEX NUMBER EXAMPLE\n";
     Complex newC1(5, 8);

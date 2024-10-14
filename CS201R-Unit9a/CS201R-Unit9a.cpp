@@ -5,6 +5,7 @@
 #include "Examples.h"
 
 int main() {
-	ComplexExample();
+	SlicingExample();
+	//ComplexExample();
 	//RectangleExample();
 }
