@@ -33,9 +33,7 @@ class Dog : public Pet {
 private:
     string breed;
 public:
-    Dog(string n, string t, string b) {
-        name = n;
-        type = t;
+    Dog(string n, string t, string b) : Pet(n, t) {
         breed = b;
     }
     void   setBreed(string b) { breed = b; }

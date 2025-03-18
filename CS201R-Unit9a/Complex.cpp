@@ -10,27 +10,43 @@ Complex::Complex(float r, float i) {
 }
 
 Complex Complex::operator+ (Complex rhs) {
-    cout << "\nCODE THIS\n//this function adds the real and imaginary parts of a complex number\n";
+    //cout << "\nCODE THIS\n//this function adds the real and imaginary parts of a complex number\n";
     Complex tempC;
-
+    tempC.real = this->real + rhs.real;
+    tempC.imaginary = this->imaginary + rhs.imaginary;
     return tempC;
 }
 
 Complex Complex::operator= (Complex rhs) {
-    cout << "\nCODE THIS\n//this function assigns the real and imaginary values to the complex object\n";
-
+    //cout << "\nCODE THIS\n//this function assigns the real and imaginary values to the complex object\n";
+    this->real = rhs.real;
+    this->imaginary = rhs.imaginary;
     return *this;
 }
 
+/*
+Complex Complex::operator= (Complex rhs) {
+    //cout << "\nCODE THIS\n//this function assigns the real and imaginary values to the complex object\n";
+    Complex newC;
+    newC.real = rhs.real;
+    newC.imaginary = rhs.imaginary;
+    return newC;
+}
+*/
 bool Complex::operator== (Complex rhs) {
-    cout << "\nCODE THIS\n//this function checks to see if 2 complex objects are equal(returns true)\n";
-
-    return false;
+    //cout << "\nCODE THIS\n//this function checks to see if 2 complex objects are equal(returns true)\n";
+    return (this->real == rhs.real
+        && this->imaginary == rhs.imaginary);
+    //return false;
 }
 
 Complex Complex::operator* (Complex rhs) {
-    cout << "\nCODE THIS\n//this function multiplies two complex numbers together\n";
+    //cout << "\nCODE THIS\n//this function multiplies two complex numbers together\n";
     Complex tempC(0, 0);
+    tempC.real = this->real * rhs.real
+        + this->imaginary * rhs.imaginary * (-1);
+    tempC.imaginary = this->real * rhs.imaginary
+        + this->imaginary * rhs.real;
 
     return tempC;
 }
@@ -42,9 +58,9 @@ istream& operator>>(istream& in, Complex& n) {
 }
 
 ostream& operator<<(ostream& out, Complex n) {
-    cout << "\nCODE THIS\n//this function writes out the complex object\n\n";
-
-    out << "Complex Number: \n";
+    //cout << "\nCODE THIS\n//this function writes out the complex object\n\n";
+    out << "Complex Number: " << n.real << " + "
+        << n.imaginary << "i\n";
     return out;
 }
 

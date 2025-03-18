@@ -20,34 +20,52 @@ void SlicingExample() {
         i.print();
 }
 
+void PolymorphismExample() {
+
+    vector <Character> party;
+    Warrior temp1("Will");
+    Mage temp2("Margie");
+    Rogue temp3("Raul");
+    party.push_back(temp1);
+    party.push_back(temp2);
+    party.push_back(temp3);
+
+    // All characters attack (should demonstrate polymorphism in action!)
+    cout << "Battle starts! Characters attack:\n";
+    for (const auto& character : party) {
+        character.attack();     // should make method calls dynamically
+    }
+}
+
 void ComplexExample() {
     cout << "\n\nCOMPLEX NUMBER EXAMPLE\n";
-    Complex newC1(5, 8);
-    Complex newC2(5, 8);
+    Complex newC1(1,2);
+    Complex newC2(3,4);
     Complex newC3;
 
-    cout << "Enter the real & imaginary values: ";
+    cout << "\nEnter the real & imaginary values: ";
     cin >> newC1;
 
-    newC3 = newC1 + newC2;
-    cout << newC3;
-
+    cout << "\nChecking equality: ";
     if (newC1 == newC2)
         cout << "They are equal!\n";
     else
         cout << "Not equal\n";
-    cout << newC3;
 
+
+    cout << "\nChecking assignment: ";
     newC3 = newC1;
     cout << newC3;
 
-
-    cout << "Enter the real & imaginary values: ";
+    cout << "\nChecking addition: ";
+    newC3 = newC1 + newC2;
+    cout << newC3;
+    
+    cout << "\nEnter the real & imaginary values: ";
     cin >> newC2;
 
     cout << "\nThe sum of the first 2 values is: ";
     Complex newSum = newC1 + newC2;
-
     cout << newSum;
 
     if (newSum == newC2)
@@ -82,4 +100,7 @@ void RectangleExample() {
 
     Rectangle rect4 = rect2;
     cout << rect4;
+
+    Rectangle newR = rect1 + rect2;
+    cout << newR;
 }

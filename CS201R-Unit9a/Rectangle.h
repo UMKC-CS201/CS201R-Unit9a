@@ -15,6 +15,7 @@ public:
 	double area();  //calculate area
 	bool operator== (const Rectangle rhs);
 	Rectangle operator= (Rectangle rhs);
+	Rectangle& operator+ (Rectangle rhs);
 	friend ostream& operator << (ostream& out, Rectangle& rhs);
 	friend istream& operator >> (istream& in, Rectangle& rhs);
 
