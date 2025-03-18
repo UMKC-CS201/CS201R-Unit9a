@@ -17,10 +17,9 @@ bool Rectangle::operator== (const Rectangle rhs) {
 }
 
 Rectangle  Rectangle::operator= (Rectangle rhs) {
-	//cout << "\nCODE THIS\nComplete code to assignment operator\n";
+	cout << "\nCODE THIS\nComplete code to assignment operator\n";
 	Rectangle newR;
-	newR.length = rhs.length;
-	newR.width = rhs.width;
+
 	return newR;
 }
 
