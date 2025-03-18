@@ -31,7 +31,7 @@ void PolymorphismExample() {
     party.push_back(temp3);
 
     // All characters attack (should demonstrate polymorphism in action!)
-    cout << "Battle starts! Characters attack:\n";
+    cout << "\n\nBattle starts! Characters attack:\n";
     for (const auto& character : party) {
         character.attack();     // should make method calls dynamically
     }

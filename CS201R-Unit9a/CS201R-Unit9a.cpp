@@ -6,7 +6,7 @@
 
 int main() {
 	SlicingExample();
-	//PolymorphismExample();
-	//ComplexExample();
+	PolymorphismExample();
+	ComplexExample();
 	//RectangleExample();
 }

@@ -11,10 +11,9 @@ Rectangle::Rectangle(double length, double width) {
 }
 
 bool Rectangle::operator== (const Rectangle rhs) {
-	//cout << "\nCODE THIS\ncomplete code to check for equality of 2 rectangles\n";
-	//return false;
-	return(this->length == rhs.length
-		&& this->width == rhs.width);
+	cout << "\nCODE THIS\ncomplete code to check for equality of 2 rectangles\n";
+	return false;
+
 }
 
 Rectangle  Rectangle::operator= (Rectangle rhs) {
@@ -24,6 +23,7 @@ Rectangle  Rectangle::operator= (Rectangle rhs) {
 	newR.width = rhs.width;
 	return newR;
 }
+
 Rectangle& Rectangle::operator+(Rectangle rhs) {
 	Rectangle result = Rectangle(this->width + rhs.width,this->length + rhs.length);
 	return result;
@@ -34,15 +34,14 @@ double Rectangle::area() {
 }
 
 istream& operator >> (istream& in, Rectangle& r) {
-	//cout << "\nCODE THIS\nComplete code to input length & width\n";
-	in >> r.length >> r.width;
+	cout << "\nCODE THIS\nComplete code to input length & width\n";
+ 
 	return in;
 }
 
 ostream& operator<<(ostream& out, Rectangle& r) {
-	//out << "\nCODE THIS\nComplete code to output rectangle\n";
-	out << "Length: & Width: " << r.length
-		<< " & " << r.width << endl;
+	out << "\nCODE THIS\nComplete code to output rectangle\n";
+
 	return out;
 }
 

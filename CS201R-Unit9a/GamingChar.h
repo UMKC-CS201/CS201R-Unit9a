@@ -7,9 +7,7 @@ using namespace std;
 class Character {
 public:
     string name;
-    virtual void attack() const {
-        cout << "Parent class does nothing" << endl;
-    }
+    virtual void attack() const { cout << "Parent does nothing\n"; }
     virtual ~Character() {}           // Virtual destructor
 
     Character() {   name = " ";   }

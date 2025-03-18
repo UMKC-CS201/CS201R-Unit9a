@@ -17,8 +17,10 @@ public:
     float getImag() { return imaginary; }
 
     Complex operator+(Complex rhs);
+    Complex operator-(Complex rhs);
     Complex operator*(Complex rhs);
     Complex operator=(Complex rhs);
+    Complex operator+=(Complex rhs);
     bool operator==(Complex rhs);
 
     // friend operators for input & output streams
